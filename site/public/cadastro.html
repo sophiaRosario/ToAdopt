@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | To Adopt</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="containerHeader">
+            <h1 class="titulo">To Adopt</h1>
+            <ul class="navbar">
+                <li><a href="./index.html">Inicial</a></li>
+                <li>|</li>
+                <li><a href="./login.html">Login</a></li>
+                <li>|</li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section>
+        <div class="imagem">
+            <img src="css/assets/gatoCadastro.png" >   
+        </div>
+
+        
+        <div class="containerForm">
+            <div class="formulario">
+                <h1>Bem-vindo!</h1>
+
+                <span class="tipoCampo">Nome</span>
+                <input type="text" placeholder="Nome" id="ipt_nome">
+
+               <span class="tipoCampo">Sobrenome</span>
+                <input type="text" placeholder="Sobrenome" id="ipt_sobrenome">
+
+                <span class="tipoCampo">Email</span>
+                <input type="email" placeholder="nome@email.com" id="ipt_email">
+
+                <span class="tipoCampo">Telefone</span>
+                <input type="text" placeholder="00 96859-9779" id="ipt_cel">
+
+                <span class="tipoCampo">Senha</span>
+                <input type="password" placeholder="******" id="ipt_senha">
+
+                <span class="tipoCampo">Confirmação de senha</span>
+                <input type="password" placeholder="******" id="ipt_confirma_senha">
+                
+                <button onclick="cadastrar()">Cadastrar</button>
+                <p>Já tem uma conta? <a href="">Faça Login</a></p>
+                
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container">
+            <ul class="icons">
+                
+            </ul>
+            <h4>nao sei SPTech &copy; 2022
+                <br>
+                <span class="version">
+                    v1.0.0
+                </span>
+            </h4>
+        </div>
+    </div>
+</body>
+</html>
