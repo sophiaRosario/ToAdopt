@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="sweet.js"></script>
 </head>
 <body>
     <div class="header">
@@ -33,14 +34,13 @@
                 <input type="password" placeholder="******" id="ipt_senha">
 
                 <button onclick="entrar()">Entrar</button>
-                <p>Não tem conta? <a href="">Registre agora</a></p>
+                <p>Não tem conta? <a href="cadastro.html">Registre agora</a></p>
             </div>
         </div>
         <div class="imagem">
             <img src="css/assets/doglogin.png" >   
         </div>
     </section>
-
     <div class="footer">
         <div class="container">
             <h4>nao sei SPTech &copy; 2022
@@ -54,5 +54,27 @@
 </body>
 </html>
 <script>
+    function entrar() {
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            Swal.fire({
+            icon: 'error',
+            text: 'Por favor insira dados em todos os campos abaixo!',
+            confirmButtonColor: "#631CAD", 
+            }) 
+            return false;
+        }
+        else{
+            Swal.fire({
+            icon: 'error',
+            text: 'tudo certo meu lido falta a parte da api',
+            confirmButtonColor: "#631CAD", 
+            }) 
+            
+        }
+        
+    }
 
 </script>
