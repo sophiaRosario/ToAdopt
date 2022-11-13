@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script src="sweet.js"></script>
 </head>
 <body>
+    <script src="sweet.js"></script>
 
     <div class="header">
         <div class="containerHeader">
             <h1 class="titulo">To Adopt</h1>
             <ul class="navbar">
-                <li><a href="./index.html">Inicial</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li>|</li>
                 <li><a href="./login.html">Login</a></li>
                 <li>|</li>
@@ -104,11 +104,52 @@
             return false;
         }
         else{
-            Swal.fire({
-            icon: 'error',
-            text: 'tudo certo meu lido falta a parte da api!',
-            confirmButtonColor: "#631CAD", 
-            }) 
+            
+            // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                telefoneServer: telefoneVar,
+                senhaServer: senhaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+                //mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, "2000")
+                
+                //limparFormulario();
+                //finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+        return false;
         }
     }
+
+   /* function sumirMensagem() {
+        cardErro.style.display = "none"
+    }*/
+        
+
 </script>
