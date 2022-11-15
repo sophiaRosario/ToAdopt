@@ -1,17 +1,17 @@
-section{
+.bloco{
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
 }
 
-section .imagem{
+.bloco .imagem{
     position: relative;
     width: 50%;
     height: 100% ;
 }
 
-section .imagem::before{
+.bloco .imagem::before{
 position: absolute;
 top: 0;
 left: 0;
@@ -21,7 +21,7 @@ z-index: 1;
 mix-blend-mode: screen;
 }
 
-section .imagem img{
+.bloco .imagem img{
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +30,7 @@ section .imagem img{
     object-fit: cover;
 }
 
-section .containerForm{
+.bloco .containerForm{
     display: flex;
     width: 50%;
     height: 100%;
@@ -38,16 +38,16 @@ section .containerForm{
     align-items: center;
 }
 
-section .containerForm .formulario{
+.bloco .containerForm .formulario{
     width: 50%;
 }
 
-section .formulario .tipoCampo{
+.bloco .formulario .tipoCampo{
     font-size: 20px;
     font-weight: 600;
 }
 
-section .containerForm .formulario input{
+.bloco .containerForm .formulario input{
     outline: none;
     margin-bottom: 1%;
     border: 1px solid black;
@@ -59,7 +59,7 @@ section .containerForm .formulario input{
     display: flex;
 }
 
-section .containerForm .formulario button {
+.bloco .containerForm .formulario button {
     height: 30px;
     width: 80%;
     margin-top: 5%;
@@ -72,11 +72,12 @@ section .containerForm .formulario button {
     border-radius: 20px;
     cursor: pointer;
   }
+
   button:hover{
     transform: scale(1.1);
     transition: all 0.5s;
   }
 
-  section .containerForm .formulario p {
+  /*section .containerForm .formulario p {
     font-size: 15px;
-  }
+  }*/

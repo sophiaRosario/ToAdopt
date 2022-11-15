@@ -1,17 +1,18 @@
+
 .footer {
-    background-color: #631CAD;
-    height: 150px;
-    color: #fff;
-    display: flex;
-    font-size: 15px;
-  }
-  
-  .footer .containerFoot {
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .footer .containerFoot .version {
-    font-size: 12px;
-  }
-  
+  background-color: #631CAD;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+}
+
+.footer .container {
+  justify-content: center;
+  text-align: center;
+  margin-left: 35%;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
