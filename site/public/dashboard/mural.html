@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de comentários</title>
+    <link rel="stylesheet" href="comentario.css">
+</head>
+<body>
+    <div class="janela">
+        <div class="header-left">
+            <h1>To Adopt</h1>
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="cards.html">
+                    <h3>Aquários</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav">
+                <h3>O que estão falando sobre a To Adopt?</h3>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="dash-right">
+            <div class="avisos">
+                <div class="container">
+                    <h1>Compatilhe sua experiência</h1>
+                    <div class="div-form">
+                        <form id="form_postagem" method="post" onsubmit="return publicar()">
+                            <label>
+                                Título:
+                                <br>
+                                <input name="titulo" id="titulo" maxlength="100" type="text">
+                            </label>
+                            <br><br>
+                            <label>
+                                Descrição (máximo de 250 caracteres):
+                                <br>
+                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                            </label>
+                            <br>
+                            <button>Enviar</button>
+                        </form>
+                    </div>
+                    <h1>O que estão falando sobre a gente?</h1>
+                    <div class="div-results">
+                        <div id="feed_container" class="feed-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
+<script>
+
+</script>
