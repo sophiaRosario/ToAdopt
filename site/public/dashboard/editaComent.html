@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Adopt | Comentário</title>
-    <link rel="stylesheet" href="comentario.css">
+    <title>To Adopt | Editor de Comentários</title>
+    <link rel="stylesheet" href="style/comentario.css">
 </head>
 <body>
     <div class="janela">
@@ -17,19 +17,19 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="">
+                <a href="dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="quiz.html">
                     <h3>Quiz</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
-                <a href="">
-                    <h3>Estáticas</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="">
+                <a href="mural.html">
                     <h3>O que estão falando sobre a gente?</h3>
                 </a>
             </div>
@@ -81,5 +81,31 @@
 </body>
 </html>
 <script>
+    function listarInfosDeUm() {
+        console.log("Criar função de trazer informações de post escolhido");
+    }
 
+    function editar() {
+        fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                descricao: textarea_descricao.value
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert("Post atualizado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                window.location = "/dashboard/mural.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
 </script>

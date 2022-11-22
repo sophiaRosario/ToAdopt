@@ -60,12 +60,8 @@
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            Swal.fire({
-            icon: 'error',
-            text: 'Por favor insira dados em todos os campos abaixo!',
-            confirmButtonColor: "#631CAD", 
-            }) 
+        if (emailVar.trim() == "" || senhaVar == "") {
+            alert(`Por favor insira dados em todos os campos abaixo!`)
             return false;
         }
         else{
@@ -97,7 +93,7 @@
                         sessionStorage.ID_USUARIO = json.id;
 
                         setTimeout(function () {
-                            window.location = "./dashboard/teste.html";
+                            window.location = "./dashboard/dashboard.html";
                         }, 1000); // apenas para exibir o loading
 
                     });

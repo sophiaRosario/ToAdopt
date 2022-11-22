@@ -8,6 +8,7 @@ body{
   display: flex;
   width: 100vw;
   color: white;
+  font-size: 99%;
 }
 
 .header-left a {
@@ -26,8 +27,11 @@ body{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid yellow;
+  border-right: 3px solid rgb(255, 255, 0);
   background-color: #631CAD;
+}
+.btn-nav{
+  border-radius: 5px;
 }
 
 /*comecar aqui a parte que digita o comentario*/
@@ -35,16 +39,22 @@ body{
   display: flex;
   width: 75%;
   height: fit-content;
-  background-color: white;
+  background-color: #482E63;
+  border-radius: 5%;
   position: relative;
-  top: 0;
+  margin-top: 5%;
   left: 30%;
-  color: black;
+  color: white;
 
 }
 .avisoCaptura {
   display: flex;
   justify-content: center;
+}
+.dash-right{
+  width: 50%;
+  justify-content: center;
+  margin-left: 5%;
 }
 
 .dash-right .avisos {
@@ -67,33 +77,35 @@ body{
 }
 
 .dash-right .avisos .div-form label {
-  color: black;
+  color: white;
   width: 100%;
 }
 
 .dash-right .avisos .div-form input {
   width: 100%;
   border-radius: 5px;
-  border-color: yellow;
+  border-color: rgba(255, 255, 0, 0.589);
 }
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
-  border: 3px solid yellow;
+  border: 3px solid rgba(255, 255, 0, 0.589);
   background-color: white;
   border-radius: 5px;
 }
 
 .dash-right .avisos .div-form button {
   cursor: pointer;
-  border: 0;
-  border-radius: 5px;
+  /* border: 0; */
+  border-radius: 6px;
+  border-color: yellow;
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
   color: white;
   background-color: #631CAD;
   width: 120px;
+  margin-top: 1%;
 }
 
 .publicacao-btn-editar {
@@ -115,7 +127,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid yellow;
+  border-bottom: 3px solid rgba(255, 255, 0, 0.589);
   padding: 20px;
 }
 
@@ -202,4 +214,5 @@ body{
   text-align: center;
   padding: 2% 5%;
   cursor: pointer;
+  border: 3px solid yellow;
 }

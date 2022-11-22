@@ -78,32 +78,19 @@
         var senhaVar = Number(ipt_senha.value); 
         var confirmaSenha = Number(ipt_confirma_senha.value);
 
-        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "" || confirmaSenha == "") {
-            Swal.fire({
-            icon: 'error',
-            text: 'Por favor insira dados em todos os campos abaixo!',
-            confirmButtonColor: "#631CAD", 
-            }) 
+        if (nomeVar.trim() == "" || sobrenomeVar.trim() == "" || emailVar.trim() == "" || telefoneVar.trim() == "" || senhaVar.trim() == "" || confirmaSenha.trim() == "") {
+            alert(`Por favor insira dados em todos os campos abaixo!`)
             return false;
         }
         else if (senhaVar != confirmaSenha) {
-            Swal.fire({
-            icon: 'error',
-            text: 'As senhas informadas não são iguais!',
-            confirmButtonColor: "#631CAD", 
-            }) 
+            alert(`As senhas informadas não são iguais!`)
             return false;
         }
         else if (Number.isNaN(telefoneVar)) {
-            Swal.fire({
-            icon: 'error',
-            text: 'Por favor verifique se os números no campo telefone são válidos!',
-            confirmButtonColor: "#631CAD", 
-            }) 
+            alert(`Por favor verifique se os números no campo telefone são válidos!`)
             return false;
         }
         else{
-            
             // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
