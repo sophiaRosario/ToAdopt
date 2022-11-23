@@ -78,7 +78,7 @@
         var senhaVar = Number(ipt_senha.value); 
         var confirmaSenha = Number(ipt_confirma_senha.value);
 
-        if (nomeVar.trim() == "" || sobrenomeVar.trim() == "" || emailVar.trim() == "" || telefoneVar.trim() == "" || senhaVar.trim() == "" || confirmaSenha.trim() == "") {
+        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "" || confirmaSenha == "") {
             alert(`Por favor insira dados em todos os campos abaixo!`)
             return false;
         }
