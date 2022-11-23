@@ -7,7 +7,7 @@ function listar() {
             a.id AS idComentario,
             a.titulo,
             a.descricao,
-            a.fk_usuario,
+            a.fkUsuario,
             u.id AS idUsuario,
             u.nome,
             u.email,
