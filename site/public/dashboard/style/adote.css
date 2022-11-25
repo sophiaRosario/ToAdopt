@@ -5,7 +5,7 @@ body{
     font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
-    height: 115vh;
+    height: 120vh;
     width: 100%;
     /* background-color: red;  */
     display: flex;
@@ -20,7 +20,7 @@ body{
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    height: 75%;
+    height: 80%;
     /* background-color: green; */
 }
 .imagens{
@@ -30,4 +30,15 @@ body{
 }
 .imagem img{
     height: 250px;
+}
+.imagens button{
+    background-color: #631CAD;
+    margin-top: 2%;
+    width: 30%;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    padding: 2% 5%;
+    cursor: pointer;
+    border: 3px solid yellow;
 }

@@ -7,7 +7,7 @@
     <title>To Adopt | Editor de Comentários</title>
     <link rel="stylesheet" href="style/comentario.css">
 </head>
-<body>
+<body onload="validarSessao(), listarInfosDeUm()">
     <div class="janela">
         <div class="header-left">
             <h1>To Adopt</h1>
@@ -17,14 +17,14 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="dashboard.html">
-                    <h3>Gráficos</h3>
+                <a href="quiz.html">
+                    <h3>Quiz</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
-                <a href="quiz.html">
-                    <h3>Quiz</h3>
+                <a href="dashboard.html">
+                    <h3>Gráficos</h3>
                 </a>
             </div>
 
@@ -108,4 +108,5 @@
             console.log(`#ERRO: ${resposta}`);
         });
     }
+
 </script>
