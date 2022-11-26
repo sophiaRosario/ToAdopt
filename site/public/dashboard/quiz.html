@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Adopt | Quiz</title>
-    <link rel="stylesheet" href="style/comentario.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style/comentario.css">
+  <link rel="stylesheet" href="style/quizz.css">
 </head>
 <body>
-    <div class="janela">
+      <div class="janela">
         <div class="header-left">
             <h1>To Adopt</h1>
 
@@ -33,21 +34,26 @@
                     <h3>O que estão falando sobre a gente?</h3>
                 </a>
             </div>
-
+            
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
         </div>
-    </div>
+      </div>
+        <main>
+          <div class="content">
+            <span class="spnQtd"></span>
+            <span class="question"></span>
+            <div class="answers"></div>
+          </div>
+          <div class="finish">
+              <span></span>
+              <button>Reiniciar</button>
+          </div>
+        </main>
+          
+        <script src="script.js" type="module"></script>
 
-    <div class="">
-
-    </div>
+      
 </body>
 </html>
-<script>
-    var acertos = 0;
-    var erros = 0;
-    
-
-</script>
