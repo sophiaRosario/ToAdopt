@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
   <link rel="stylesheet" href="style/comentario.css">
-  <link rel="stylesheet" href="style/quizz.css">
+  <link rel="stylesheet" href="style/quiz.css">
 </head>
 <body>
-      <div class="janela">
+     <div class="janela">
         <div class="header-left">
             <h1>To Adopt</h1>
 
@@ -40,20 +40,184 @@
             </div>
         </div>
       </div>
-        <main>
-          <div class="content">
-            <span class="spnQtd"></span>
-            <span class="question"></span>
-            <div class="answers"></div>
-          </div>
-          <div class="finish">
-              <span></span>
-              <button>Reiniciar</button>
-          </div>
-        </main>
-          
-        <script src="script.js" type="module"></script>
-
-      
+      <div class="box">
+        <h2>Quiz</h2>
+        <div id="quiz"></div>
+        <button id="submit">Resultado</button>
+        <div id="results"></div>
+      </div>
 </body>
 </html>
+<script>
+    var myQuestions = [
+	{
+		question: "1) Você tem tempo suficiente para dar atenção ao seu pet?",
+		answers: {
+			a: 'errada<br>',
+			b: 'certa<br>',
+			c: 'errada<br>'
+		},
+		correctAnswer: 'b'
+	},
+	{
+		question: "2) Você está preparado para se comprometer financeiramente?",
+		answers: {
+			a: '-30<br>',
+			b: '5<br>',
+			c: '10'
+		},
+		correctAnswer: 'c'
+	},
+	{
+		question: "3) A sua família, ou companheiro de quarto também quer um cachorro novo em casa?",
+		answers: {
+			a: 'musica<br>',
+			b: 'filme<br>',
+			c: 'da like'
+		},
+		correctAnswer: 'a'
+	},
+    {
+		question: "4) Qual o espaço da sua casa?",
+		answers: {
+			a: 'musica<br>',
+			b: 'filme<br>',
+			c: 'da like'
+		},
+		correctAnswer: 'a'
+	},
+    {
+		question: "5) É permitido ter animais no seu prédio/codominio?",
+		answers: {
+			a: 'musica<br>',
+			b: 'filme<br>',
+			c: 'da like'
+		},
+		correctAnswer: 'a'
+	}
+];
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+	function showQuestions(questions, quizContainer){
+		// precisaremos de um lugar para armazenar a saída e as opções de resposta
+		var output = [];
+		var answers; // poderia ter dado outro nome, alem do mais, eu mesmo me confundi :/
+
+		// para cada questão
+		for(var i=0; i<questions.length; i++){
+			
+			// mas, primeiro resetamos a lista de questões
+			answers = [];
+
+			// e aqui faremos para cada resposta na questão.
+			for(letter in questions[i].answers){
+
+				// Aqui será escrito para html para usar o Radio.
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+					//	+ letter + ') ' vou deixar a letra comentada, porque achei melhor assim
+						+ questions[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer.innerHTML = output.join('');
+	}
+
+
+	function showResults(questions, quizContainer, resultsContainer){
+			
+		
+		var answerContainers = quizContainer.querySelectorAll('.answers');
+		
+		
+		var userAnswer = '';
+		var numCorrect = 0;
+        var pontos = 0;
+		
+		
+		for(var i=0; i<questions.length; i++){
+
+			// agora ele vai virar a letra que esta marcada.
+			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			
+			
+			if(userAnswer===questions[i].correctAnswer){
+				
+				numCorrect++;
+                pontos++
+				
+				answerContainers[i].style.color = 'lightgreen';
+			}
+			
+			else{
+				
+				answerContainers[i].style.color = 'red';
+			}
+		}
+
+        if (numCorrect <= 2) {
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length +  '<p>Você precisa pensar mais antes de adotar um pet</p>';
+        }
+        else if (numCorrect <= 4) {
+            resultsContainer.innerHTML = '<p>' + numCorrect + ' de ' + questions.length + 'Você está matade apto para adotar<br></p>';
+        }
+        else if (numCorrect == 5) {
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<p>Parabens</p><br>';
+        }
+        pontoRegistra(pontos);
+			
+	}
+	// show questions right away
+	showQuestions(questions, quizContainer);
+
+	// on submit, show results
+	submitButton.onclick = function(){
+		showResults(questions, quizContainer, resultsContainer);
+	}
+} 
+
+function pontoRegistra(pontos,numCorrect) {
+    var fkUsuario = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/pontoRegistra", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                acertosServer: numCorrect,
+                pontosServer: pontos,
+                fkUsuarioServer: fkUsuario,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+        return false;
+    }
+</script>

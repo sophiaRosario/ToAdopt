@@ -1,0 +1,49 @@
+.box{
+    height: 50%;
+    width: 50%;
+    margin-left: 35%;
+    margin-top: 3%;
+    background-color: #482E63;
+    color: white;
+    border-radius: 1%;
+}
+.box button{
+    background-color: #631CAD;
+    color: white;
+    border-radius: 6%;
+    border-color: yellow;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 28px;
+    margin-top: 1%;
+    margin-left: 38%;
+    
+}
+.question{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.answers label{
+    gap: 5px;
+    padding-left: 5%;
+}
+#results{
+    padding: 0;
+    margin: 0;
+    margin-left: 46%;
+    margin-top: 2%;
+    padding-bottom: 3%;
+}
+h2{
+   justify-content: center;
+   display: flex;
+   padding-top: 2%;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: -82%;
+}
