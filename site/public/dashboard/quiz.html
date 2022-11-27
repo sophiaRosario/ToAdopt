@@ -53,47 +53,45 @@
 	{
 		question: "1) Você tem tempo suficiente para dar atenção ao seu pet?",
 		answers: {
-			a: 'errada<br>',
-			b: 'certa<br>',
-			c: 'errada<br>'
+			a: 'Não tenho tempo<br>',
+			b: 'Sim tenho tempo<br>',
 		},
 		correctAnswer: 'b'
 	},
 	{
 		question: "2) Você está preparado para se comprometer financeiramente?",
 		answers: {
-			a: '-30<br>',
-			b: '5<br>',
-			c: '10'
+			a: 'Não acho necessario se preparar financeira <br>',
+			b: 'Mais ou menos <br>',
+			c: 'Sim, estou preparado <br>'
 		},
 		correctAnswer: 'c'
 	},
 	{
-		question: "3) A sua família, ou companheiro de quarto também quer um cachorro novo em casa?",
+		question: "3) A sua família, ou companheiro de quarto também quer um pet novo em casa?",
 		answers: {
-			a: 'musica<br>',
-			b: 'filme<br>',
-			c: 'da like'
+			a: 'Todos que moram comigo querem um novo pem em casa<br>',
+			b: 'Duas pessoras não querem um novo pet<br>',
 		},
 		correctAnswer: 'a'
 	},
     {
-		question: "4) Qual o espaço da sua casa?",
+		question: "4) Quais dessas frutas não posso dar para o meu pet?",
 		answers: {
-			a: 'musica<br>',
-			b: 'filme<br>',
-			c: 'da like'
+			a: 'Banana, Limão, Abacaxi<br>',
+			b: 'Kiwi, Abacate e Morango <br>',
+			c: 'Abacate, Kiwi e Laranja<br> '
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'c'
 	},
     {
 		question: "5) É permitido ter animais no seu prédio/codominio?",
 		answers: {
-			a: 'musica<br>',
-			b: 'filme<br>',
-			c: 'da like'
+			a: 'Não é permitido<br>',
+			b: 'Sim é permitido<br>',
+			c: 'Não sei se é permitido<br>'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'b'
 	}
 ];
 
@@ -140,25 +138,17 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		quizContainer.innerHTML = output.join('');
 	}
 
-
 	function showResults(questions, quizContainer, resultsContainer){
-			
-		
 		var answerContainers = quizContainer.querySelectorAll('.answers');
-		
-		
+
 		var userAnswer = '';
 		var numCorrect = 0;
         var pontos = 0;
-		
 		
 		for(var i=0; i<questions.length; i++){
 
 			// agora ele vai virar a letra que esta marcada.
 			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-			
-			
-			
 			if(userAnswer===questions[i].correctAnswer){
 				
 				numCorrect++;
@@ -172,18 +162,16 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 				answerContainers[i].style.color = 'red';
 			}
 		}
-
         if (numCorrect <= 2) {
-            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length +  '<p>Você precisa pensar mais antes de adotar um pet</p>';
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length +  '<p>Você prcisa estudar mais sobre adoção responsável de pets abandonados</p>';
         }
         else if (numCorrect <= 4) {
             resultsContainer.innerHTML = '<p>' + numCorrect + ' de ' + questions.length + 'Você está matade apto para adotar<br></p>';
         }
         else if (numCorrect == 5) {
-            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<p>Parabens</p><br>';
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<p>Parabens, você está apto a vazer uma adoção responsavel. Acesse a página Adote</p><br>';
         }
         pontoRegistra(pontos);
-			
 	}
 	// show questions right away
 	showQuestions(questions, quizContainer);
