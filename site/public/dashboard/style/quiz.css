@@ -6,6 +6,9 @@
     background-color: #482E63;
     color: white;
     border-radius: 1%;
+    box-shadow: 15px 14px 19px 4px rgba(0, 0, 0, 0.63);
+    -webkit-box-shadow: 15px 14px 19px 4px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 15px 14px 19px 4px rgba(0, 0, 0, 0.63);
 }
 .box button{
     background-color: #631CAD;
@@ -16,8 +19,7 @@
     font-size: 18px;
     padding: 10px 28px;
     margin-top: 1%;
-    margin-left: 38%;
-    
+    margin-left: 38%;   
 }
 .question{
     margin-top: 2%;
