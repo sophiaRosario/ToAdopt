@@ -31,7 +31,7 @@ body{
 .imagem img{
     height: 250px;
 }
-.imagens button{
+.imagens button{ 
     background-color: #631CAD;
     margin-top: 2%;
     width: 30%;
@@ -42,3 +42,52 @@ body{
     cursor: pointer;
     border: 3px solid yellow;
 }
+
+/* modal */
+#open-modal{
+    background-color: blue;
+}
+#fade,
+#modal{
+    transition: 0.5s;
+    opacity: 1;
+}
+#fade{
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#modal{
+    position: fixed;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+}
+

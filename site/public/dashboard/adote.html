@@ -51,17 +51,17 @@
         <div class="imagem">
             <div class="imagens">
                 <img src="imgAdote/bone.jpg" alt="Bone">
-                Bone tem 2 anos e parece muito um brownie gigante, e todo o seu tamanho pode assustar. Mas pelo contrário, o Bone é muito amoroso e adoro fazer novos aumigos. 
+                Bone tem 2 anos e parece muito um brownie gigante e todo o seu tamanho pode assustar. Mas pelo contrário, o Bone é muito amoroso e adoro fazer novos aumigos. 
                 <button id="open-modal">Adotar</button>
             </div>
             <div class="imagens">
                 <img src="imgAdote/sofia.jpg" alt="Sofia">
-                Sofia tem 5 anos, ela tinha muito medo de pessoas, mas com muito amor e carinho aprendeu a confiarnovamente nas pessoas. 
-                <button id="open-modal">Adotar</button>
+                Sofia tem 5 anos, ela tinha muito medo de pessoas, mas com muito amor e carinho aprendeu a confiar novamente nas pessoas. 
+                <button id="open-modal">Adotar</button><br>
             </div>
             <div class="imagens">
                 <img src="imgAdote/juliete.jpg" alt="Juliette">
-                Juliette tem 6 anos, é muito dócil e támida, mas ama um caringo na barriga.<br>
+                Juliette tem 6 anos, é muito dócil e tímida, mas ama um carinho na barriga.<br>
                 <button id="open-modal">Adotar</button>
             </div>
         </div>
@@ -84,12 +84,38 @@
         </div>
     </div>
 
-    <div id="fade">
-         
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Esse é o modal</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus repellat voluptatum quasi illo cupiditate. Ipsam, veritat</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus repellat voluptatum quasi illo cupiditate. Ipsam, veritat</p>
+        </div>
     </div>
+
 </body>
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    const openModalButton = document.querySelector("#open-modal");
+    const closeModalButton = document.querySelector("#close-modal");
+    const modal = document.querySelector("#modal");
+    const fade = document.querySelector("#fade");
+
+    const toggleModal = () =>{
+        modal.classList.toggle("hide");
+        fade.classList.toggle("hide");
+    }
+
+    [openModalButton, closeModalButton, fade].forEach((el) => {
+        el.addEventListener("click", () => toggleModal());
+    });
+
+    
+
 
 </script>
