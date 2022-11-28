@@ -11,7 +11,7 @@ create table usuario(
   );
 
 create table adocao(
-  idAdocao int primary key auto_increment,
+  id int primary key auto_increment,
   nomeAnimal VARCHAR(45),
   especie CHAR(8),
   sexo CHAR(5),
@@ -22,7 +22,7 @@ create table adocao(
 );
 
 create table respostaQuiz(
-  idQuiz int primary key auto_increment,
+  id int primary key auto_increment,
   totalPontos int,
   fkUsuario int,
   foreign key (fkUsuario)
@@ -38,19 +38,19 @@ create table aviso (
     references usuario(id)
    );
    
-select * from comentario;
-INSERT INTO comentario (titulo, descricao, fkUsuario) VALUES ('Teste', '1212', 2);
-
+/*insert into comentario (titulo, descricao, fkUsuario) values ('Teste', '1212', 2);*/
 insert into adocao values
+(null, 'Bone', 'Cachorro', 'Macho', 'Grande', null),
+(null, 'Sofia', 'Cachorro', 'Femia', 'Medio', null),
 (null, 'Jullite', 'Cachorro', 'Femia', 'Pequeno', null),
-(null, 'Cladio', 'Cachorro', 'Macho', 'Medio', null),
-(null, 'Alexia', 'Cachorro', 'Femia', 'Grande', null),
 (null, 'Cassio', 'Gato', 'Macho', 'Pequeno', null),
-(null, 'Chico', 'Gato', 'Macho', 'Medio', null),
+(null, 'Frederico', 'Gato', 'Macho', 'Medio', null),
 (null, 'Dengosa', 'gato', 'Femia', 'Grande', null);
 
+select * from usuario;
 select * from adocao;
-select * from usuario; 
+select * from respostaQuiz;
+select * from comentario;
 
 /*SELECT 
             a.idComentario AS idComentario,
