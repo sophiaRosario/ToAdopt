@@ -3,11 +3,14 @@
 Projeto individual
 
 ## Documentação de cores
-colocar
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor exemplo       | ![#631cad](https://via.placeholder.com/10/0B1927?text=+) #631cad |
+| Cor exemplo       | ![#ffde59](https://via.placeholder.com/10/FFFFFF?text=+) #ffde59 |
 
 ## Documentação
 colocar
-[Documentação](/Documenta%C3%A7%C3%A3o/Cacaloud.docx)
+[Documentação](/documentacao/toadopt.docx)
 
 ## Autores
 - [Sophia Rosário](https://github.com/sophiaRosario)
