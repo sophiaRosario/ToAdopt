@@ -50,7 +50,7 @@ insert into adocao values
 select * from usuario;
 select * from adocao;
 select * from respostaQuiz;
-select * from comentario;
+select * from aviso;
 
 /*SELECT 
             a.idComentario AS idComentario,
