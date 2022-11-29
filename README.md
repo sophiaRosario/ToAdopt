@@ -11,7 +11,6 @@ Para a codificação desse site com as funcionalidades cadastro, login, quiz, da
 | Cor exemplo       | ![#ffde59](https://via.placeholder.com/10/FFFFFF?text=+) #ffde59 |
 
 ## Documentação
-colocar
 [Documentação](/documentacao/toadopt.docx)
 
 ## Autores
