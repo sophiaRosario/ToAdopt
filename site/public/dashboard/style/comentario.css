@@ -224,3 +224,12 @@ textarea{
   cursor: pointer;
   border: 3px solid yellow;
 }
+
+.dash #graficos h1{
+  margin-left: 75%;
+  color: black;
+  text-align: center;
+ display: inline-flex;
+  
+
+}

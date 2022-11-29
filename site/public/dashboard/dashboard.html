@@ -13,6 +13,7 @@
 
     <div style="height: 100px;" class="janela">
         <div class="header-left">
+            <h1>To Adopt</h1>
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
@@ -21,25 +22,42 @@
                     <h3>Quiz</h3>
                 </a>
             </div>
+            <div class="btn-nav-white">
+                <a href="dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+			
+			<div class="btn-nav-white">
+                <a href="adote.html">
+                    <h3>Adote</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="mural.html">
+                    <h3>O que estão falando sobre a gente?</h3>
+                </a>
+            </div>
+            
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
 
         </div>
-
         <div  class="dash">
             <div  id="graficos">
-
+                <h1>Verifique sua pontuação</h1>
                 <div  id="grafico2" class="display-none">
-                    <div style="height: 400px; width: 600px; margin-left: 65%;" class="graph">
+                    <div style="height: 400px; width: 600px; margin-left: 95%; margin-top: 10%;" class="graph">
                         <canvas id="myChartCanvas"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
-
 </html>
-
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     idUsuario = sessionStorage.ID_USUARIO;
@@ -119,7 +137,7 @@
                 label: 'Pontos',
                 data: [],
                 fill: true,
-                backgroundColor: 'rgb(0, 0, 4)'
+                backgroundColor: 'rgb(99, 28, 173)'
    
             }]
         };
