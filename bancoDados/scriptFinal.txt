@@ -23,7 +23,7 @@ create table adocao(
 
 create table respostaQuiz(
   id int primary key auto_increment,
-  totalPontos int,
+  pontos int,
   fkUsuario int,
   foreign key (fkUsuario)
     references usuario(id)
