@@ -1,4 +1,4 @@
-![img](/public/css/assets/gatohome0.png)
+![img](site/public/css/assets/capaDoc.png)
 
 # To Adopt
 Projeto individual realizado pela aluna Sophia Rosário na faculdade SPtech. To Adopt é um site que visa auxiliar na comunicação entre ONGS e indivíduos que almejam adotar um pet.
