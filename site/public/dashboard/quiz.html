@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="box">
-        <h2>Quiz</h2>
+        <h2>Você realmente quer adotar um pet?</h2>
         <div id="quiz"></div>
         <button id="submit">Resultado</button>
         <div id="results"></div>
@@ -113,7 +113,7 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 	function showQuestions(questions, quizContainer){
-		// precisaremos de um lugar para armazenar a saída e as opções de resposta
+		//armazenar a saída e as opções de resposta
 		var output = [];
 		var answers; // poderia ter dado outro nome, alem do mais, eu mesmo me confundi :/
 
@@ -172,13 +172,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			}
 		}
         if (numCorrect <= 2) {
-            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length +  '<p>Você prcisa estudar mais sobre adoção responsável de pets abandonados</p>';
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length +  '<p>Você prcisa estudar mais sobre adoção responsável de pets.</p>';
         }
         else if (numCorrect <= 4) {
-            resultsContainer.innerHTML = '<p>' + numCorrect + ' de ' + questions.length + 'Você está matade apto para adotar<br></p>';
+            resultsContainer.innerHTML = '<p>' + numCorrect + ' de ' + questions.length + '<p><br>Você está no caminho certo para adotar um pet<br></p>';
         }
         else if (numCorrect == 5) {
-            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<p>Parabens, você está apto a vazer uma adoção responsavel. Acesse a página Adote</p><br>';
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<p><br>Parabéns, você está apto a fazer uma adoção responsavel. Clique no botão Adote</p><br>';
         }
         pontoRegistra(pontos);
 	}
