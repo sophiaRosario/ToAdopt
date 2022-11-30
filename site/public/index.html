@@ -70,10 +70,17 @@
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
-  </div>  
+  </div>
+
+  <div class="sortear">
+    <h1>Qual pet você seria?</h1>
+    <button onclick="">Ver Resultado</button>
+  </div>
+  
 
     <div class="parceiros">
         <H1>Nossos parceiros</H1>
+        <DIv class="mensagem"></DIv>
     </div>
 
     <div class="footer">
@@ -88,35 +95,16 @@
 </body>
 </html>
 <script>
-    /*
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
+    function sortear() {
+        var sorte = (Math.random()*2).toFixed(0);
+        if (sorte == 0) {
+            mensagem.innerHTML = `vc seria um gato dorminhoco`
+        }
+        else if (sorte == 1) {
+            mensagem.innerHTML = `vc seria um cachorro bagunceiro`
+        }
     }
 
-    // Thumbnail image controls
-    function currentSlide(n) {
-    showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    }*/
     let slideIndex = 0;
     showSlides();
 
@@ -129,6 +117,6 @@
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
     }
 </script>

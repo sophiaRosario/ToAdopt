@@ -5,9 +5,8 @@ body{
     font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
-    height: 120vh;
+    height: 125vh;
     width: 100%;
-    /* background-color: red;  */
     display: flex;
     padding-left: 30%;
     justify-content: center;
@@ -21,12 +20,10 @@ body{
     align-items: center;
     width: 80%;
     height: 80%;
-    /* background-color: green; */
 }
 .imagens{
     height: 250px;
     margin-left: 3%;
-    /* background-color: yellow; */
 }
 .imagem img{
     height: 250px;
