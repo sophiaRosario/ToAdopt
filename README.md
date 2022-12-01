@@ -10,6 +10,7 @@ Para a codificação desse site com as funcionalidades cadastro, login, quiz, da
 | ----------------- | ---------------------------------------------------------------- |
 | Cor exemplo       | ![#631cad](https://via.placeholder.com/10/0B1927?text=+) #631cad |
 | Cor exemplo       | ![#ffde59](https://via.placeholder.com/10/FFFFFF?text=+) #ffde59 |
+| Cor exemplo       | ![#482E63](https://via.placeholder.com/10/FFFFFF?text=+) #482E63 |
 
 ## Documentação
 [Documentação](/documentacao/toadopt.docx)
