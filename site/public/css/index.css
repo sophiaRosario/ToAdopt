@@ -151,12 +151,18 @@ body {
   background-position: center;
   background-position-x: 45%;
 }
-/* qual pet*/
+.containerSorte{
+  display: flex;
+  align-items: center;
+  margin-left: 19%;
+  margin-top: 3%;
+}
+
 .sortear{
   background-color: #482E63;
   width: 40%;
   height: 500px;
-  margin-left: 28%; 
+  margin-left: 20%;
   margin-top: 2%;
   border-radius: 3%;  
   display: flex;
@@ -169,13 +175,16 @@ body {
 }
 .sortear,
 .sortear2{
-  display: inline-block; 
+  display: flex;
+  flex-direction: row; 
 }
 .sortear2{
-   margin-left: 5%;
-   background-color: #717171;
    height: 300px;
    width: 20%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 .sortear2 h1{
   color: #631CAD;
@@ -192,4 +201,5 @@ button{
   color: white;
   border-radius: 6px;
   border-color: yellow;
+  margin: 0;
 }
