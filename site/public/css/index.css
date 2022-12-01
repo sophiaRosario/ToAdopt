@@ -151,7 +151,6 @@ body {
   background-position: center;
   background-position-x: 45%;
 }
-
 /* qual pet*/
 .sortear{
   background-color: #482E63;
@@ -172,7 +171,6 @@ body {
 .sortear2{
   display: inline-block; 
 }
-
 .sortear2{
    margin-left: 5%;
    background-color: #717171;
@@ -183,7 +181,6 @@ body {
   color: #631CAD;
   text-align: center;
 }
-
 button{
   display: flex;
   justify-content: center;
