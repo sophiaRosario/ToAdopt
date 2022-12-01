@@ -31,12 +31,11 @@
         <div class="conheca">
             <h1>Conhça a To Adopt</h1>
             <h2>Nós fazemos a conexão entre quem deseja adotar um pet com uma rede de mais de 123 ONGs e protetores parceiros.</h2>
-                    <h3>Juntos somos mais fortes!</h3>
+            <h3>Juntos somos mais fortes!</h3>
         </div>
     </div>
-      <!-- Slideshow container -->
-    <div class="slideshow-container">
 
+    <div class="slideshow-container">
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 4</div>
@@ -57,30 +56,30 @@
         <div class="numbertext">4/ 4</div>
         <img src="css/assets/cao3.jpg" style="width:100%">
       </div>
-  
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
-  
   <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-  </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
 
-  <div class="sortear">
-    <h1>Qual pet você seria?</h1>
-    <button onclick="">Ver Resultado</button>
-  </div>
-  
-
+    <div class="sortear2">
+        <h1>Qual pet você seria?</h1>
+        <button onclick="sorte()">Sortear</button>
+    </div>
+    <div class="sortear">
+        <div id="mensagem"></div>
+    </div>
+   
     <div class="parceiros">
         <H1>Nossos parceiros</H1>
-        <DIv class="mensagem"></DIv>
+        <div class="mensagem"></DIv>
     </div>
 
     <div class="footer">
@@ -90,21 +89,13 @@
                     v1.0.0
                 </span>
             </h4>
+            
         </div>
     </div>
 </body>
 </html>
 <script>
-    function sortear() {
-        var sorte = (Math.random()*2).toFixed(0);
-        if (sorte == 0) {
-            mensagem.innerHTML = `vc seria um gato dorminhoco`
-        }
-        else if (sorte == 1) {
-            mensagem.innerHTML = `vc seria um cachorro bagunceiro`
-        }
-    }
-
+    
     let slideIndex = 0;
     showSlides();
 
@@ -118,5 +109,15 @@
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+
+    function sorte() {
+        var sorte = (Math.random()*1).toFixed(0);
+        if (sorte == 0) {
+            mensagem.innerHTML = `Você seria um gato dorminhoco!<br><br> <img src="css/assets/sortecatjpg.jpg" alt="cat" width="400px">`
+        }
+        else if (sorte == 1) {
+            mensagem.innerHTML = `Você seria um cachorro bagunceiro!<br><br> <img src="css/assets/sorte.jpg" alt="dog" width="400px">`
+        }
     }
 </script>

@@ -151,4 +151,48 @@ body {
   background-position: center;
   background-position-x: 45%;
 }
-/* qual pet  */
+
+/* qual pet*/
+.sortear{
+  background-color: #482E63;
+  width: 40%;
+  height: 500px;
+  margin-left: 28%; 
+  margin-top: 2%;
+  border-radius: 3%;  
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;  
+  font-size: 200%;
+  color: white; 
+  align-items: center;    
+  padding: 4%;                                    
+}
+.sortear,
+.sortear2{
+  display: inline-block; 
+}
+
+.sortear2{
+   margin-left: 5%;
+   background-color: #717171;
+   height: 300px;
+   width: 20%;
+}
+.sortear2 h1{
+  color: #631CAD;
+  text-align: center;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  align-items: center;
+  margin-left: 46%;
+  background-color: #631CAD;
+  color: white;
+  border-radius: 6px;
+  border-color: yellow;
+}
